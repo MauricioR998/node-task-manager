@@ -17,7 +17,7 @@ test("Should sign up a new user", async () => {
     })
     .expect(201);
 
-  // Assert tha the database was changed correctly
+  // Assert the database was changed correctly
   const user = await User.findById(response.body.user._id);
   expect(user).not.toBeNull();
 
